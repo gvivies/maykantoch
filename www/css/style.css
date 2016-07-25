@@ -1,0 +1,79 @@
+/* Empty. Add your own CSS if you like */
+
+.map {
+    background-image: url('../img/kantoche.png');
+    background-position: 0px 8px;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    height: 520px;
+    z-index: 1;
+    width: 100%;
+}
+
+.locations {
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 9;
+}
+
+.location {
+    position: absolute;
+    font-size: 9px;
+    height: 42px;
+    width: 42px;
+    z-index: 9;
+}
+
+.location-background {
+    background-image: url('../img/red-pin.png');
+    background-position: center 8px;
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+    height: 100%;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.location-label {
+    color: #FF0000;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.self {
+    position: absolute;
+    font-size: 9px;
+    height: 42px;
+    width: 42px;
+    z-index: 9;
+}
+
+.self-background {
+    border-radius: 21px;
+    background-color: #10FF10;
+    height: 42px;
+    padding-top: 10px;
+    text-align: center;
+    width: 42px;
+}
+
+.self-label {
+    color: #000000;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.refresh {
+    border-radius: 23px;
+    background-color: #666;
+    color: #ffffff;
+    position: fixed;
+    height: 46px;
+    left: 320px;
+    top: 492px;
+    width: 46px;
+    text-align: center;
+}

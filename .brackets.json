@@ -1,0 +1,10 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/gilles/git/maykantoch/www/lib/ionic/js/angular/angular-resource.min.js",
+        "/Users/gilles/git/maykantoch/plugins/cordova-plugin-device/src/browser/DeviceProxy.js",
+        "/Users/gilles/git/maykantoch/plugins/cordova-plugin-device/src/firefoxos/DeviceProxy.js",
+        "/Users/gilles/git/maykantoch/plugins/cordova-plugin-device/src/tizen/DeviceProxy.js",
+        "/Users/gilles/git/maykantoch/plugins/cordova-plugin-device/src/ubuntu/device.js",
+        "/Users/gilles/git/maykantoch/plugins/cordova-plugin-device/src/windows/DeviceProxy.js"
+    ]
+}
