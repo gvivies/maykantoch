@@ -1,12 +1,16 @@
 <ion-view view-title="Area">
-    <ion-content overflow-scroll=”true”>
-        <div class="map" on-hold="ctrl.locateMe($event)"></div>
-        <!--<div  class="locations"> -->
+    <!-- <ion-content overflow-scroll=”true” direction="xy"> -->
+    <ion-content delegate-handle="mainScroll" has-bouncing="true" scroll="false">
+        <!-- <ion-scroll direction="x" scrollbar-y="false" scrollbar-x="false" on-drag-down="ctrl.onDrag($event)" on-drag-up="ctrl.onDrag($event)" on-drag-left="ctrl.onDrag($event)" on-drag-right="ctrl.onDrag($event)" on-hold="ctrl.locateMe($event)">
+            <ion-scroll direction="y" style="white-space:nowrap;" has-bouncing="true">
+            <ion-scroll direction="x" style="white-space:nowrap;" has-bouncing="true"> -->
+        <div class="map" on-double-tap="ctrl.placeMe($event)" on-drag="ctrl.onDrag($event)" on-release="ctrl.onRelease($event)" ng-style="ctrl.draggedStyle"></div>
         <location ng-repeat="loc in ctrl.locations" class="location" user="loc"></location>
-        <!-- </div> -->
-        <self class="self"></self>
-        <div class="refresh">
-            <a class="button button-icon icon ion-loop"></a>
-        </div>
+        <self class="self" account="ctrl.myAccount" ng-style="selfStyle"></self>
+        <!-- </ion-scroll> 
+        </ion-scroll> -->
     </ion-content>
+    <div class="refresh">
+        <a class="button button-icon icon ion-loop" ng-click="ctrl.refresh()"></a>
+    </div>
 </ion-view>

@@ -5,9 +5,10 @@
     background-position: 0px 8px;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    height: 520px;
+    height: 971px;
+    overflow: scroll;
+    width: 949px;
     z-index: 1;
-    width: 100%;
 }
 
 .locations {
@@ -22,58 +23,80 @@
 .location {
     position: absolute;
     font-size: 9px;
-    height: 42px;
-    width: 42px;
+    word-wrap: normal;
     z-index: 9;
 }
 
 .location-background {
     background-image: url('../img/red-pin.png');
-    background-position: center 8px;
+    background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: 34px 34px;
     height: 100%;
-    padding-top: 40px;
+    min-width: 34px;
+    padding-top: 34px;
     text-align: center;
 }
 
 .location-label {
     color: #FF0000;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: bold;
 }
 
 .self {
-    position: absolute;
+    display: inline-block;
+    align-content: center;
     font-size: 9px;
-    height: 42px;
-    width: 42px;
+    position: absolute;
+    text-align: center;
+    word-wrap: normal;
     z-index: 9;
 }
 
 .self-background {
-    border-radius: 21px;
-    background-color: #10FF10;
-    height: 42px;
-    padding-top: 10px;
+    background-image: url('../img/green-pin.png');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 34px 34px;
+    height: 100%;
+    min-width: 34px;
+    padding-top: 34px;
     text-align: center;
-    width: 42px;
 }
 
 .self-label {
     color: #000000;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: bold;
 }
 
 .refresh {
     border-radius: 23px;
-    background-color: #666;
-    color: #ffffff;
+    background-color: #387ef5;
     position: fixed;
     height: 46px;
-    left: 320px;
-    top: 492px;
+    left: 80%;
+    top: 80%;
     width: 46px;
     text-align: center;
+}
+
+.refresh a {
+    color: #ffffff !important;
+}
+
+.debug-panel {
+    background-color: #c2c2c2;
+    position: fixed;
+    height: 26px;
+    left: 2%;
+    top: 88%;
+    width: 246px;
+    text-align: center;
+}
+
+.debug-label {
+    color: #000;
+    font-size: 9px;
 }

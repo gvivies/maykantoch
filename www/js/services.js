@@ -67,13 +67,14 @@ function AccountService() {
         this.account.coordY = y;
     }
 
-    function initAccount() {
+    function initAccount(name) {
+        var newId = Math.floor((Math.random() * 100000) + 1);
         this.account = {
-            id: '0',
-            username: 'Gilles',
-            coordX: '250',
-            coordY: '350'
-        }
+            id: newId,
+            username: name,
+            coordX: 0,
+            coordY: 0
+        };
     }
 
     service.getAccount = getAccount;

@@ -22,21 +22,25 @@
     function SelfDirective($rootScope, AccountService) {
 
         function linkFn(scope, element, attrs) {
-            //$rootScope.$on('SELF-LOCATE', function (event, data) {
-            //var newX = parseInt(data.coordX) - 21,
-            //    newY = parseInt(data.coordY) - 42;
-            //attrs.style = 'left:' + newX + 'px;top:' + newY + 'px';
-            //attrs.xpos = data.coordX;
-            //attrs.ypos = data.coordY;
-            //});
-            scope.user = AccountService.getAccount();
+            scope.user = scope.myself;
+            scope.selfDefined = function () {
+                return (scope.user != undefined);
+            }
+
+            function onMapMoved(event, data) {
+                element.css('transform', 'translate(' + data.left + 'px, ' + data.top + 'px)');
+                element.css('-webkit-transform', 'translate(' + data.left + 'px, ' + data.top + 'px)');
+            }
+            $rootScope.$on('MAP_MOVED', onMapMoved)
         }
 
         return {
             restrict: 'AE',
             replace: true,
             translude: true,
-            scope: {},
+            scope: {
+                myself: '=account'
+            },
             templateUrl: 'templates/self.html',
             link: linkFn
         };

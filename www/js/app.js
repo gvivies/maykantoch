@@ -24,7 +24,7 @@ angular.module('starter', ['ionic',
     });
 })
 
-.config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
+.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $ionicConfigProvider) {
 
     // Ionic uses AngularUI Router which uses the concept of states
     // Learn more here: https://github.com/angular-ui/ui-router
@@ -52,19 +52,23 @@ angular.module('starter', ['ionic',
             views: {
                 'tab-account': {
                     templateUrl: 'templates/tab-account.html',
-                    controller: 'AccountCtrl'
+                    controller: 'AccountCtrl',
+                    controllerAs: 'ctrl'
                 }
             },
             cache: false
 
         });
 
-    $urlRouterProvider.otherwise('/tab/area');
+    $urlRouterProvider.otherwise('/tab/account');
 
     // Allows CORS 
     $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 
     // Allows Cookies sent by server
     $httpProvider.defaults.withCredentials = true;
+
+    $ionicConfigProvider.tabs.position('bottom');
+
 
 });
